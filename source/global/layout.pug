@@ -1,0 +1,23 @@
+doctype html
+html.page(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      meta(content='width=device-width, initial-scale=1', name='viewport')
+      meta(content='IE=Edge', http-equiv='X-UA-Compatible')
+      link(rel='icon', href='favicon.ico', sizes='any', type='image/x-icon')
+      link(rel='icon', href='/img/favicon.svg', type='image/svg+xml')
+      link(rel='apple-touch-icon', href='img/favicon/favicon-180.png')
+      link(rel='manifest', href='site.webmanifest')
+      linl(rel='stylesheet', src='style.scss')
+  body.page__body
+    block header
+      header.page__header
+    block main
+      main.page__main
+    block footer
+      footer.page__footer
+    block modal
+      .modal
+    block script
+      script

@@ -1,0 +1,10 @@
+node_modules/
+build/
+.DS_Store
+.vscode
+*.ai
+*.fig
+*.log
+*.pdf
+*.psd
+npm-debug.*
