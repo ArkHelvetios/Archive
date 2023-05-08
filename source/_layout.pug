@@ -9,15 +9,15 @@ html.page(lang='en')
       // link(rel='icon', href='/img/favicon.svg', type='image/svg+xml')
       // link(rel='apple-touch-icon', href='img/favicon/favicon-180.png')
       // link(rel='manifest', href='site.webmanifest')
-      link(rel='stylesheet', href='style.scss')
+      link(rel='stylesheet', href='./style.scss')
   body.page__body
     block header
-      include ../components/page-header/page-header.pug
+      include components/page-header/page-header.pug
     block main
-      include ../components/page-main/page-main.pug
+      include components/page-main/page-main.pug
     block footer
-      include ../components/page-footer/page-footer.pug
+      include components/page-footer/page-footer.pug
     block modal
       .modal
     block script
-      script(src='app.js', type='module')
+      script(src='./script.js', type='module')

@@ -1,0 +1,29 @@
+// Colors
+
+$brand-color-blue: #1fa2ff;
+$brand-color-cyan: #19f2dd;
+$brand-color-mint: #a6ffcb;
+$brand-color-grey: #202020;
+$white: #ffffff;
+$black: #000000;
+
+// Fonts
+
+$font-family-heading: ('Montserrat', sans-serif);
+$font-family-plaintext: ('Roboto', sans-serif);
+
+// Container
+
+$width-mobile: 320px;
+$width-tablet: 768px;
+$width-desktop: 1280px;
+
+$container-padding-mobile: 20px;
+$container-padding: 30px;
+
+$mobile-only: "(max-width: #{$width-tablet - 1})";
+$tablet-only: "(min-width: #{$width-tablet}) and (max-width: #{$width-desktop - 1})";
+$tablet: "(min-width: #{$width-tablet})";
+$desktop: "(min-width: #{$width-desktop})";
+
+$retina: "(min-resolution: 2dppx)";

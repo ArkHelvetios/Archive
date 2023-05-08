@@ -1,0 +1,9 @@
+ul.menu-contacts
+  mixin item(id, href)
+    li.menu-contacts__item
+      a.menu-contacts__link(href=href, aria-label=id)
+        svg.menu-contacts__icon(width='22', height='22', aria-hidden='true')
+          use(href='./images/sprite.svg#' + id)
+  +item('email-icon', 'mailto:arkhelvetios@gmail.com')
+  +item('telegram-icon', 'https://t.me/Helvetios')
+  +item('github-icon', 'https://github.com/ArkHelvetios')

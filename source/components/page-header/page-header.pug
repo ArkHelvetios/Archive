@@ -1,2 +1,6 @@
-header.page-header
-  p This is header
+header.page-header.container
+  a.page-header__link(href='/', aria-label='home')
+    svg.page-header__logo(width='30', height='26', aria-hidden='true')
+      use(href='./images/sprite.svg#logo-icon')
+  .page-header__menu
+    include ../menu-contacts/menu-contacts.pug

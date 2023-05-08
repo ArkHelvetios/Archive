@@ -1,0 +1,23 @@
+.page {
+  height: 100%;
+  font-family: $font-family-plaintext;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media #{$tablet} {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-height: 100%;
+  min-width: $width-mobile;
+  color: $white;
+  background-color: $brand-color-grey;
+  margin: 0;
+}
