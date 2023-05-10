@@ -39,6 +39,7 @@
     "pug-lint": "^2.7.0",
     "pug-lint-config-clock": "^2.0.0",
     "sass": "^1.62.1",
+    "sharp": "^0.31.3",
     "stylelint": "^15.6.1",
     "stylelint-config-standard-scss": "^9.0.0"
   },

@@ -1,3 +1,9 @@
-.page-main {
-  width: 100%;
+.page-main__intro {
+  padding-top: 30px;
+  margin-bottom: 30px;
+
+  @media #{$tablet} {
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
 }

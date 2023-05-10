@@ -4,9 +4,10 @@
 
   &:hover,
   &:focus {
+    outline: none;
+
     .logo__icon {
       color: $brand-color-mint;
-      outline: none;
       filter: drop-shadow(0 0 7px $brand-color-cyan);
     }
   }
