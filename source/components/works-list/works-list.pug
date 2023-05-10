@@ -1,0 +1,22 @@
+ul.works-list
+  h2.visually-hidden List of works
+  mixin item(name, date, link, img)
+    li.works-list__item
+      .works-list__item-cover
+        h3.works-list__item-title= name
+        img.works-list__item-image(src=img, alt=name, width='240', height='180')
+      .works-list__item-info
+        - let fullDate = new Date(date)
+        - let month = fullDate.toLocaleString('en-us', { month: 'long' });
+        - let year = fullDate.toLocaleString('en-us', { year: 'numeric' });
+        time.works-list__item-date(datetime=date) Сreation date: #{month + ' ' + year}
+        a.works-list__item-link(href=link) Open live
+
+  +item('Krusar – digital marketing agency', '2018-05', './projects/krusar/index.pug', './images/face.jpg')
+  +item('Mega-M – transport company', '2018-06', './projects/krusar/index.pug', './images/face.jpg')
+  +item()
+  +item()
+  +item()
+  +item()
+  +item()
+  +item()
