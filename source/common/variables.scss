@@ -4,6 +4,7 @@ $brand-color-blue: #1fa2ff;
 $brand-color-cyan: #19f2dd;
 $brand-color-mint: #a6ffcb;
 $brand-color-grey: #202020;
+$brand-color-lighten-grey: lighten($brand-color-grey, 5%);
 $white: #ffffff;
 $black: #000000;
 
