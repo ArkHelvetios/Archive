@@ -1,22 +1,27 @@
 ul.works-list
-  h2.visually-hidden List of works
-  mixin item(name, date, link, img)
+  h2.visually-hidden List of my works
+  mixin item(name, date, link, imgName)
     li.works-list__item
-      .works-list__item-cover
-        h3.works-list__item-title= name
-        img.works-list__item-image(src=img, alt=name, width='240', height='180')
       .works-list__item-info
+        h3.works-list__item-title= name
         - let fullDate = new Date(date)
-        - let month = fullDate.toLocaleString('en-us', { month: 'long' });
-        - let year = fullDate.toLocaleString('en-us', { year: 'numeric' });
+        - let month = fullDate.toLocaleString('en-us', { month: 'long' })
+        - let year = fullDate.toLocaleString('en-us', { year: 'numeric' })
         time.works-list__item-date(datetime=date) Сreation date: #{month + ' ' + year}
         a.works-list__item-link(href=link) Open live
+      picture.works-list__item-picture
+        - let imgPath = './images/previews/' + imgName
+        - let imgLink = imgPath + '.jpg'
+        - let imgLinkRetina = imgPath + '@2x.jpg 2x'
+        - let imgLinkAvif = imgPath + '.jpg?as=avif, ' + imgPath + '@2x.jpg?as=avif 2x'
+        - let imgLinkWebp = imgPath + '.jpg?as=webp, ' + imgPath + '@2x.jpg?as=webp 2x'
+        source(type='image/avif', srcset=imgLinkAvif)
+        source(type='image/webp', srcset=imgLinkWebp)
+        img.works-list__item-image(src=imgLink, srcset=imgLinkRetina, alt=name, width='240', height='160')
 
-  +item('Krusar – digital marketing agency', '2018-05', './projects/krusar/index.pug', './images/face.jpg')
-  +item('Mega-M – transport company', '2018-06', './projects/krusar/index.pug', './images/face.jpg')
-  +item()
-  +item()
-  +item()
-  +item()
-  +item()
-  +item()
+  +item('Krusar – social media marketing agency', '2018-05', './projects/krusar/index.pug', 'krusar-land')
+  +item('Mega-M Trans – multimodal logistic company', '2018-07', './projects/mega-m-trans/index.pug', 'mega-m-trans')
+  +item('Hashmount – crypto investment company', '2018-09', './projects/hashmount/index.pug', 'hashmount')
+  +item('Cosmodrome Games - publisher\'s board games tournament', '2019-03', './projects/cg-tournament/index.pug', 'cg-tournament')
+  +item('Smartphone Inc. - promo of new strategy board game', '2019-05', './projects/smartphone-inc/index.pug', 'smartphone-inc')
+  +item('500 Evil Cards - promo of new adult-themed board game', '2019-07', './projects/evil-cards/index.pug', 'evil-cards')
