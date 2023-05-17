@@ -1,9 +1,25 @@
 .intro
-  h1.intro__title Archive of my works
+  h1.visually-hidden Aleksander Arkhipov – archive of my works 2018-2022
+  .intro__title
+    p.intro__title-text Hello, my&nbsp;name&nbsp;is
+      br
+      span.text-accent Aleksander Arkhipov
   .intro__description-wrapper
-    p.intro__description Hello, my&nbsp;name&nbsp;is #[span.intro__text-accent Aleksander Arkhipov]. I&nbsp;am&nbsp;a&nbsp;freelance front&#8209;end developer now, but before that I worked as a UI/UX designer.
-    p.intro__description.intro__description--accent In most cases I've used Webflow.io for building UI and than export source on clients hosting. Less often it was Tilda.ws or something similar.
-    p.intro__description Below you can find my work as a UI/UX designer that I tried to save.
+    p.intro__description I&nbsp;am&nbsp;a&nbsp;freelance front&#8209;end developer now, but before that I worked as a UI/UX designer with "#[span.text-accent turnkey website]" service. This means that I created website from UX-prototype to #[span.text-accent ready&#8209;to&#8209;use] product.
+    .intro__description-spoiler.spoiler
+      input.spoiler__toggle.visually-hidden(type='checkbox', id='spoiler-toggle', name='spoiler-toggle')
+      label.spoiler__label(for='spoiler-toggle')
+        svg.spoiler__label-icon(width='12', height='12', aria-hidden='true')
+          use(href='./images/sprite.svg#arrow-icon')
+        span.spoiler__label-text Turnkey website means
+      .spoiler__content
+        .spoiler__inner
+          p.intro__description I used Adobe XD, Illustrator, Photoshop and then also Figma for creating adaptive design.
+          p.intro__description Then I was moving to some of zero&#8209;code tools - in most cases it was Webflow, less often Wix, Tilda, Pinegrow and Elementor.
+          p.intro__description When source was ready to import, I was going to prepare server-side and DNS settings - domain, hosting, SSL, set some DNS records for services and wildcards options.
+          p.intro__description After that I was exporting sources to client's hosting or sometimes, if it made sense, I implement front to CMS like WordPress or Bitrix. Yeah, that's kinda my PHP back&#8209;end experience.
+          p.intro__description And finally, I've set up analytical services and custom events for them - Google Tag Manager, Google Analytics, Google Search Console, Social media Pixels (like Facebook Pixel), and all above Russian local analogs (Yandex, VK etc).
+    p.intro__description In the list below you can find my works for the period 2018-2022, which I tried to save. Unfortunately, only ~50% of them are here, because some of them are under some sort of NDA, and some of them just lost.
   picture.intro__picture-tag
     source(type='image/avif', srcset='./images/face.jpg?as=avif, ./images/face@2x.jpg?as=avif 2x')
     source(type='image/webp', srcset='./images/face.jpg?as=webp, ./images/face@2x.jpg?as=webp 2x')

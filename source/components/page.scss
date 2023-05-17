@@ -1,12 +1,12 @@
 .page {
   height: 100%;
   font-family: $font-family-plaintext;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5em;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 22px;
   overflow-x: hidden;
 
-  @media #{$tablet} {
+  @media #{$desktop} {
     font-size: 16px;
     line-height: 24px;
   }

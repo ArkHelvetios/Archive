@@ -8,7 +8,7 @@ ul.works-list
         - let month = fullDate.toLocaleString('en-us', { month: 'long' })
         - let year = fullDate.toLocaleString('en-us', { year: 'numeric' })
         time.works-list__item-date(datetime=date) Сreation date: #{month + ' ' + year}
-        a.works-list__item-link(href=link) Open live
+        a.works-list__item-link.button(href=link) Open live
       picture.works-list__item-picture
         - let imgPath = './images/previews/' + imgName
         - let imgLink = imgPath + '.jpg'

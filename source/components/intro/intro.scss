@@ -5,14 +5,33 @@
   @media #{$tablet} {
     grid-template-columns: 1fr min-content;
     grid-template-rows: auto auto;
-    column-gap: 20px;
+    column-gap: 30px;
+    row-gap: 20px;
   }
 }
 
 .intro__title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @media #{$tablet} {
+    &::after {
+      content: '';
+      height: 1px;
+      width: 100%;
+      background-image: linear-gradient(-90deg, $brand-gradient);
+      margin-right: -50px;
+      z-index: -1;
+    }
+  }
+}
+
+.intro__title-text {
+  flex-grow: 1;
   font-family: $font-family-heading;
   font-size: 26px;
-  line-height: 1.2em;
+  line-height: 1.25em;
   font-weight: 400;
   text-align: center;
   margin: 0;
@@ -20,9 +39,36 @@
   margin-bottom: 15px;
 
   @media #{$tablet} {
-    font-size: 38px;
+    font-size: 46px;
     text-align: start;
+    min-width: max-content;
     margin-bottom: 20px;
+  }
+}
+
+.intro__description-wrapper {
+  display: grid;
+  color: $white-75;
+
+  @media #{$tablet} {
+    grid-column: 1/ -1;
+    grid-row: 2;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  @media #{$desktop} {
+    grid-column: 1/ 2;
+  }
+}
+
+.intro__description-spoiler {
+  margin-bottom: 20px;
+
+  @media #{$tablet} {
+    grid-column: 1/-1;
+    grid-row: 2;
+    margin-top: 10px;
   }
 }
 
@@ -36,33 +82,28 @@
   &:not(:last-child) {
     margin-bottom: 10px;
   }
-
-  &--accent {
-    position: relative;
-    padding-left: 20px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-image: linear-gradient($brand-gradient);
-
-    }
-  }
 }
 
-.intro__text-accent {
-  color: $brand-color-cyan;
+.intro__accent {
+  position: relative;
+  padding-left: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient($brand-gradient);
+  }
 }
 
 .intro__picture-tag {
   display: none;
   position: relative;
-  width: 260px;
-  height: 260px;
+  width: 140px;
+  height: 140px;
   margin-right: 10px;
   margin-left: 10px;
 
@@ -82,7 +123,7 @@
 
   &::after {
     background-color: $brand-color-grey;
-    margin: -8px;
+    margin: -9px;
     z-index: -1;
   }
 
@@ -91,10 +132,20 @@
     grid-column: -2/-1;
     grid-row: 1/-1;
   }
+
+  @media #{$desktop} {
+    width: 260px;
+    height: 260px;
+  }
 }
 
 .intro__image {
-  width: 260px;
-  height: 260px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
+
+  @media #{$desktop} {
+    width: 260px;
+    height: 260px;
+  }
 }
