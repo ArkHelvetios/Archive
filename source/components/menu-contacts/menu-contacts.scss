@@ -11,6 +11,7 @@
 }
 
 .menu-contacts__link {
+  display: block;
   color: $white;
   transition: all 200ms ease-out;
   opacity: 0.7;
