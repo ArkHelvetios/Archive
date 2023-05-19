@@ -23,7 +23,7 @@
     }
   },
   "scripts": {
-    "start": "parcel --open",
+    "start": "parcel",
     "build": "parcel build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

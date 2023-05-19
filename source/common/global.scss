@@ -5,6 +5,7 @@ img {
 
 a {
   text-decoration: none;
+  color: $brand-color-cyan;
 }
 
 *,
@@ -39,8 +40,4 @@ a {
     padding-left: $container-padding;
     padding-right: $container-padding;
   }
-}
-
-.text-accent {
-  color: $brand-color-cyan;
 }

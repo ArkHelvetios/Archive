@@ -3,7 +3,15 @@
   margin-bottom: 30px;
 
   @media #{$tablet} {
-    padding-top: 80px;
+    padding-top: 50px;
     margin-bottom: 50px;
+  }
+}
+
+.page-main__works-list {
+  margin-bottom: 50px;
+
+  @media #{$desktop} {
+    margin-bottom: 100px;
   }
 }

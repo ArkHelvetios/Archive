@@ -1,0 +1,35 @@
+.link-external {
+  position: relative;
+  color: inherit;
+  -webkit-text-fill-color: transparent;
+  background-color: currentColor;
+  background-image: linear-gradient(135deg, $brand-gradient);
+  background-repeat: no-repeat;
+  background-position: 0 1.2em;
+  background-clip: text;
+  transition: all 200ms ease-out;
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -0.15em;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-image: linear-gradient(90deg, $brand-gradient);
+    pointer-events: none;
+    transition: all 200ms ease-out;
+  }
+
+  &:hover,
+  &:focus {
+    background-position: 0 0em;
+    outline: none;
+
+    &::before {
+      bottom: 0.5em;
+      opacity: 0;
+    }
+  }
+}
