@@ -1,20 +1,14 @@
 // Colors
 
-$brand-color-blue: #1fa2ff;
-$brand-color-cyan: #19f2dd;
-$brand-color-mint: #a6ffcb;
-$brand-color-grey: #202020;
-$brand-color-lighten-grey: lighten($brand-color-grey, 5%);
+$brand-color-orange: #f7a62b;
+$brand-color-grey: #3f3f3f;
 $white: #ffffff;
-$white-75: darken($white, 25%);
 $black: #000000;
-
-$brand-gradient: ($brand-color-mint, $brand-color-cyan, $brand-color-blue);
 
 // Fonts
 
 $font-family-heading: ('Montserrat', sans-serif);
-$font-family-plaintext: ('Roboto', sans-serif);
+$font-family-plaintext: ('Raleway', sans-serif);
 
 // Container
 
