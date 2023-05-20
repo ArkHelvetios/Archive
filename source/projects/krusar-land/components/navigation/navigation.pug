@@ -1,0 +1,20 @@
+nav.navigation
+  a.navigation__logo(href='./index.pug', aria-label='home')
+    svg.navigation__logo-icon(width='130', height='20', aria-hidden='true')
+      use(href='./images/sprite.svg#logo')
+  button.navigation__toggle(type='button', aria-label='Открыть меню')
+  ul.navigation__list
+    mixin item(path, content)
+      li.navigation__item: a.navigation__link(href=path)= content
+
+    if isIndexPage
+      +item('#services', 'Услуги')
+      +item('#portfolio', 'Портфолио')
+      +item('#blog', 'Блог')
+      +item('#contacts', 'Контакты')
+    else
+      +item('./index.pug', 'Главная')
+      +item('./index.pug#services', 'Услуги')
+      +item('./index.pug#portfolio', 'Портфолио')
+      +item('./index.pug#blog', 'Блог')
+      +item('./index.pug#contacts', 'Контакты')

@@ -1,0 +1,29 @@
+.navigation {
+  &--nojs {
+    display: block;
+  }
+}
+
+.navigation__logo {
+  display: block;
+}
+
+.navigation__logo-icon {
+  display: block;
+  width: 130px;
+  height: 20px;
+}
+
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__link {
+  display: block;
+  text-align: center;
+  color: $white;
+}

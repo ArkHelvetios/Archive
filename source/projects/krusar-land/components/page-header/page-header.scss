@@ -1,11 +1,10 @@
 .page-header {
   position: sticky;
-
+  top: 0;
+  background-color: $brand-color-grey;
+  padding: 20px 0;
 }
 
-.page-header__logo {
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-color: aqua;
+.page-header__callback {
+  display: none;
 }
