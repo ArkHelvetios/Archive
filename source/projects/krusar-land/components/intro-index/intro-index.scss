@@ -1,0 +1,29 @@
+.intro-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: $brand-color-grey;
+  background-image: url('./images/manhetten.jpg');
+  background-image: image-set(
+    url('./images/manhetten.jpg?as=avif') type('image/avif'),
+    url('./images/manhetten.jpg?as=webp') type('image/webp')
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media #{$retina} {
+    background-image: url('./images/manhetten@2x.jpg');
+    background-image: image-set(
+      url('./images/manhetten@2x.jpg?as=avif') type('image/avif'),
+      url('./images/manhetten@2x.jpg?as=webp') type('image/webp')
+    );
+  }
+}
+
+.intro-index__content {
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
