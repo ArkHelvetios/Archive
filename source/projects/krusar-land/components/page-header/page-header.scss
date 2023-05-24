@@ -2,9 +2,50 @@
   position: sticky;
   top: 0;
   background-color: $brand-color-grey;
-  padding: 20px 0;
+  box-shadow: 0 -15px 25px #000;
+
+  &--nojs {
+    position: static;
+  }
+}
+
+.page-header__container {
+  @media #{$tablet} {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @media #{$desktop} {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.page-header__navigation {
+  background-color: $brand-color-grey;
+  padding: 20px;
+  padding-left: $container-padding-mobile;
+  padding-right: $container-padding-mobile;
+  margin-left: calc($container-padding-mobile * -1);
+  margin-right: calc($container-padding-mobile * -1);
+
+  @media #{$tablet} {
+    padding: 0;
+    margin: 0;
+  }
+
+  @media #{$desktop} {
+    flex-grow: 1;
+    background-color: transparent;
+    box-shadow: none;
+  }
 }
 
 .page-header__callback {
   display: none;
+
+  @media #{$desktop} {
+    display: block;
+  }
 }

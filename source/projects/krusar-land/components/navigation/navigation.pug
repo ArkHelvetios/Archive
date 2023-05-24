@@ -1,8 +1,9 @@
-nav.navigation
+nav.navigation.navigation--nojs
   a.navigation__logo(href='./index.pug', aria-label='home')
     svg.navigation__logo-icon(width='130', height='20', aria-hidden='true')
       use(href='./images/sprite.svg#logo')
   button.navigation__toggle(type='button', aria-label='Открыть меню')
+    span.navigation__toggle-icon(aria-hidden='true')
   ul.navigation__list
     mixin item(path, content)
       li.navigation__item: a.navigation__link(href=path)= content

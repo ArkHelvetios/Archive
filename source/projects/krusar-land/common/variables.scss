@@ -1,7 +1,9 @@
 // Colors
 
 $brand-color-orange: #f7a62b;
+$brand-color-darken-orange: darken($brand-color-orange, 15%);
 $brand-color-grey: #3f3f3f;
+$brand-color-lighten-grey: lighten($brand-color-grey, 5%);
 $white: #ffffff;
 $black: #000000;
 

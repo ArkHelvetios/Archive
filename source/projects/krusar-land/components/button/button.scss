@@ -1,0 +1,27 @@
+.button {
+  min-height: 25px;
+  font: {
+    family: $font-family-heading;
+    size: inherit;
+    weight: 300;
+  }
+  color: $white;
+  background-color: $brand-color-orange;
+  border: 1px solid $brand-color-orange;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 100ms ease-out;
+  transition-property: color, background-color;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $brand-color-orange;
+    background-color: transparent
+  }
+
+  &:active {
+    color: $white;
+    background-color: $brand-color-darken-orange;
+  }
+}
