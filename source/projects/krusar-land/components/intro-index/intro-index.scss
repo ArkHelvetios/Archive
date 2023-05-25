@@ -4,26 +4,117 @@
   justify-content: center;
   height: 80vh;
   background-color: $brand-color-grey;
-  background-image: url('./images/manhetten.jpg');
-  background-image: image-set(
-    url('./images/manhetten.jpg?as=avif') type('image/avif'),
-    url('./images/manhetten.jpg?as=webp') type('image/webp')
-  );
+  background-image: url('./images/manhetten-mobile.jpg');
+  background-image:
+    linear-gradient(to top, $brand-color-grey, fade-out($brand-color-grey, 1)),
+    image-set(
+      url('./images/manhetten-mobile.jpg?as=avif') type('image/avif'),
+      url('./images/manhetten-mobile.jpg?as=webp') type('image/webp')
+    );
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @media #{$retina} {
-    background-image: url('./images/manhetten@2x.jpg');
-    background-image: image-set(
-      url('./images/manhetten@2x.jpg?as=avif') type('image/avif'),
-      url('./images/manhetten@2x.jpg?as=webp') type('image/webp')
-    );
+    background-image: url('./images/manhetten-mobile@2x.jpg');
+    background-image:
+      linear-gradient(to top, $brand-color-grey, fade-out($brand-color-grey, 1)),
+      image-set(
+        url('./images/manhetten-mobile@2x.jpg?as=avif') type('image/avif'),
+        url('./images/manhetten-mobile@2x.jpg?as=webp') type('image/webp')
+      );
+  }
+
+  @media #{$tablet} {
+    background-image: url('./images/manhetten-tablet.jpg');
+    background-image:
+      linear-gradient(to top, $brand-color-grey, fade-out($brand-color-grey, 1)),
+      image-set(
+        url('./images/manhetten-tablet.jpg?as=avif') type('image/avif'),
+        url('./images/manhetten-tablet.jpg?as=webp') type('image/webp')
+      );
+
+    @media #{$retina} {
+      background-image: url('./images/manhetten-tablet@2x.jpg');
+      background-image:
+        linear-gradient(to top, $brand-color-grey, fade-out($brand-color-grey, 1)),
+        image-set(
+          url('./images/manhetten-tablet@2x.jpg?as=avif') type('image/avif'),
+          url('./images/manhetten-tablet@2x.jpg?as=webp') type('image/webp')
+        );
+    }
+  }
+
+  @media #{$desktop} {
+    background-image: url('./images/manhetten-desktop.jpg');
+    background-image:
+      linear-gradient(to top, $brand-color-grey, fade-out($brand-color-grey, 1)),
+      image-set(
+        url('./images/manhetten-desktop.jpg?as=avif') type('image/avif'),
+        url('./images/manhetten-desktop.jpg?as=webp') type('image/webp')
+      );
+
+    @media #{$retina} {
+      background-image: url('./images/manhetten-desktop@2x.jpg');
+      background-image:
+        linear-gradient(to top, $brand-color-grey, fade-out($brand-color-grey, 1)),
+        image-set(
+          url('./images/manhetten-desktop@2x.jpg?as=avif') type('image/avif'),
+          url('./images/manhetten-desktop@2x.jpg?as=webp') type('image/webp')
+        );
+    }
   }
 }
 
 .intro-index__content {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.intro-index__logo {
+  display: block;
+  width: 220px;
+  height: 34px;
+  margin-bottom: 10px;
+
+  @media #{$tablet} {
+    width: 300px;
+    height: 46px;
+    margin-bottom: 20px;
+  }
+}
+
+.intro-index__subtitle {
+  font-family: $font-family-heading;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5;
+  margin: 0;
+
+  @media #{$tablet} {
+    font-size: 18px;
+  }
+}
+
+.intro-index__divider {
+  margin: 15px auto;
+
+  @media #{$tablet} {
+  margin: 25px auto;
+  }
+}
+
+.intro-index__slogan {
+  font-family: $font-family-heading;
+  text-align: center;
+  margin: 0;
+
+  @media #{$tablet} {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

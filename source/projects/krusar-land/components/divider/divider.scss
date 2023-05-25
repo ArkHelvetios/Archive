@@ -1,0 +1,44 @@
+.divider {
+  display: block;
+  position: relative;
+  width: 5px;
+  height: 5px;
+  background-color: $brand-color-orange;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: $brand-color-orange;
+  }
+
+  &::before {
+    right: 30px;
+  }
+
+  &::after {
+    left: 30px;
+  }
+
+  @media #{$tablet} {
+    width: 8px;
+    height: 8px;
+
+    &::before,
+    &::after {
+      width: 8px;
+      height: 8px;
+    }
+
+    &::before {
+      right: 50px;
+    }
+
+    &::after {
+      left: 50px;
+    }
+  }
+}
