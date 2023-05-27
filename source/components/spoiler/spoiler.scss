@@ -36,6 +36,15 @@
   transition-timing-function: ease-in-out, ease-in-out;
   overflow-y: clip;
 
+  &:focus-within {
+    max-width: 100%;
+    max-height: 600px;
+
+    @media #{$tablet} {
+      max-height: 300px;
+    }
+  }
+
   @media #{$tablet} {
     max-width: calc(50% - 10px);
   }
@@ -51,8 +60,12 @@
 }
 
 .spoiler__toggle:checked {
-  & ~ .spoiler__label {
+  & + .spoiler__label {
     max-width: 100%;
+
+    & > .spoiler__label-icon {
+      transform: rotate(90deg);
+    }
   }
 
   & ~ .spoiler__content {
@@ -63,8 +76,8 @@
       max-height: 300px;
     }
   }
+}
 
-  & ~ * > .spoiler__label-icon {
-    transform: rotate(90deg);
-  }
+.spoiler__toggle:focus + .spoiler__label {
+  background-color: fade-out($brand-color-cyan, 0.8);
 }
