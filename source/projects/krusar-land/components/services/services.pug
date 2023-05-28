@@ -1,6 +1,6 @@
 .services.container
   h2.visually-hidden Услуги нашего агенстства
-  p.services__title(data-subtitle='services') Что вы можете получить
+  p.services__title.section-title(data-subtitle='services') Что вы можете получить
   ul.services__list
     mixin item(name, imgName, text, subservices)
       li.sevices__item
@@ -26,7 +26,7 @@
           source(type='image/webp', srcset=srcsetWebp[0])
           source(type='image/webp', media='(min-width: 1280px)', srcset=srcset[2])
           source(type='image/webp', media='(min-width: 768px)', srcset=srcset[1])
-          img.services_image(src=links[0], srcset=linksRetina[0], alt=name, width='240', height='229')
+          img.services__image(src=links[0], srcset=linksRetina[0], alt=name, width='240', height='229')
         p.services__description= text
         ul.servises__subservice-list
           each subservice in subservices
@@ -39,8 +39,9 @@
       [
         'Логотип',
         'Айдентика',
+        'Веб-сайт',
         'Рекламные коммуникации',
-        'Веб-сайт']
+        ]
       )
 
     +item(
@@ -51,7 +52,8 @@
         'Таргетированная реклама',
         'Контекстная реклама',
         'Медиабаинг',
-        'SMM']
+        'SMM',
+        ]
       )
 
     +item(
@@ -62,5 +64,6 @@
         'Веб-аналитика',
         'Консалтинг',
         'Копирайтинг',
-        'Администрирование']
+        'Администрирование',
+        ]
       )
