@@ -4,7 +4,12 @@
   ul.services__list
     mixin item(name, imgName, text, subservices)
       li.sevices__item
-        h3.services__service-name= name
+        .services__info
+          h3.services__service-name= name
+          p.services__description= text
+          ul.servises__subservice-list
+            each subservice in subservices
+              li.servises__subservice-item= subservice
         picture.services__picture
           - let path = './images/' + imgName
           - let pathes = [path + '-mobile', path + '-tablet', path + '-desktop']
@@ -27,10 +32,6 @@
           source(type='image/webp', media='(min-width: 1280px)', srcset=srcset[2])
           source(type='image/webp', media='(min-width: 768px)', srcset=srcset[1])
           img.services__image(src=links[0], srcset=linksRetina[0], alt=name, width='240', height='229')
-        p.services__description= text
-        ul.servises__subservice-list
-          each subservice in subservices
-            li.servises__subservice-item= subservice
 
     +item(
       'Создание и упаковка проекта',
