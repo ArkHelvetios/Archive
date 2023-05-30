@@ -1,29 +1,51 @@
 {
   "locals": {
+
+    "services": [
+      {
+        "name": "Создание и упаковка проекта",
+        "imgPath": "./images/service-create.png",
+        "text": "Залог успешной рекламной камании - это не только попасть в целевого пользователя и добиться от него \"клика\", но и позаботиться о том, что он увидит после него. Не уделив должного внимания упаковке - вы будете уступать конкурентам, расходуя больше денег.",
+        "subservices": [ "Логотип", "Айдентика", "Веб-сайт", "Рекламные коммуникации" ]
+      },
+      {
+        "name": "Привлечение клиентов",
+        "imgPath": "./images/service-advertising.png",
+        "text": "Мы охватываем большинство способов и каналов привлечения интернет-трафика. Благодаря этому мы сможем предложить вам именно те комбинации, которые будут лучшими для вас.",
+        "subservices": [ "Таргетированная реклама", "Контекстная реклама", "Медиабаинг", "SMM" ]
+      },
+      {
+        "name": "Поддержка и развитие",
+        "imgPath": "./images/service-support.png",
+        "text": "Ведение проекта не менее важно, чем запуск рекламных кампаний. Сквозная аналитика позволяет грамотно корректировать стратегию и бюджетирование, а оперативные правки и применение новых инструментов увеличивают результативность.",
+        "subservices": [ "Веб-аналитика", "Консалтинг", "Копирайтинг", "Администрирование" ]
+      }
+    ],
+
     "portfolio": [
       {
         "name": "Магазин товаров со Святой земли Израиля",
-        "url": "./images/portfolio-israel.jpg",
+        "imgPath": "./images/portfolio-israel.jpg",
         "tags": [ "B2C", "Instagram", "SMM", "Таргетинг" ]
       },
       {
         "name": "Бутик-ателье изделий из натуральных тканей Somaforyou",
-        "url": "./images/portfolio-somaforyou.jpg",
+        "imgPath": "./images/portfolio-somaforyou.jpg",
         "tags": [ "B2C", "Instagram", "SMM", "Таргетинг" ]
       },
       {
         "name": "Клиника эстетической стоматологии Dental Beauty Art",
-        "url": "./images/portfolio-dentalbeauty.jpg",
+        "imgPath": "./images/portfolio-dentalbeauty.jpg",
         "tags": [ "B2C", "Facebook", "Instagram", "SMM" ]
       },
       {
         "name": "Компания IPGRB - Инвестиционная промышленная группа развития блокчейна",
-        "url": "./images/portfolio-ipgrb.jpg",
+        "imgPath": "./images/portfolio-ipgrb.jpg",
         "tags": [ "B2B", "Facebook", "Instagram", "SMM" ]
       },
       {
         "name": "Туристическое агентство Lord Travel",
-        "url": "./images/portfolio-lordtrevel.jpg",
+        "imgPath": "./images/portfolio-lordtrevel.jpg",
         "tags": [ "B2C", "Facebook", "Instagram", "Вконтакте" ]
       }
     ]

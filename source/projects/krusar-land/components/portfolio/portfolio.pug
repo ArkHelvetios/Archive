@@ -2,19 +2,19 @@
   h2.visually-hidden Наше портфолио
   p.portfolio__title.section-title(data-subtitle='portfolio') Что мы уже сделали
   ul.portfolio__list
-    mixin item(name, url, tags)
+    mixin item(name, imgPath, tags)
       li.portfolio__item
         h3.portfolio__case-name= name
         ul.portfolio__tags-list
           each tag in tags
             li.portfolio__tag= tag
         picture.portfolio__picture
-          source(srcset!=`${url}?as=avif&width=490, ${url}?as=avif 2x`, media='(min-width: 1280px)', type='image/avif')
-          source(srcset!=`${url}?as=webp&width=490, ${url}?as=webp 2x`, media='(min-width: 1280px)', type='image/webp')
-          source(srcset=`${url}?width=490, ${url} 2x`, media='(min-width: 1280px)')
-          source(srcset!=`${url}?as=avif&width=280, ${url}?as=avif&width=560 2x`, type='image/avif')
-          source(srcset!=`${url}?as=webp&width=280, ${url}?as=webp&width=560 2x`, type='image/webp')
-          img(src=`${url}?width=280`, srcset=`${url}?width=560 2x`, alt=name, width='280', height='230')
+          source(srcset!=`${imgPath}?as=avif&width=490, ${imgPath}?as=avif 2x`, media='(min-width: 1280px)', type='image/avif')
+          source(srcset!=`${imgPath}?as=webp&width=490, ${imgPath}?as=webp 2x`, media='(min-width: 1280px)', type='image/webp')
+          source(srcset=`${imgPath}?width=490, ${imgPath} 2x`, media='(min-width: 1280px)')
+          source(srcset!=`${imgPath}?as=avif&width=280, ${imgPath}?as=avif&width=560 2x`, type='image/avif')
+          source(srcset!=`${imgPath}?as=webp&width=280, ${imgPath}?as=webp&width=560 2x`, type='image/webp')
+          img.portfolio__image(src=`${imgPath}?width=280`, srcset=`${imgPath}?width=560 2x`, alt=name, width='280', height='230')
 
     each obj in portfolio
-      +item(obj.name, obj.url, obj.tags)
+      +item(obj.name, obj.imgPath, obj.tags)

@@ -2,7 +2,7 @@
   h2.visually-hidden Услуги нашего агенстства
   p.services__title.section-title(data-subtitle='services') Что вы можете получить
   ul.services__list
-    mixin item(name, imgName, text, subservices)
+    mixin item(name, imgPath, text, subservices)
       li.sevices__item
         .services__info
           h3.services__service-name= name
@@ -11,60 +11,15 @@
             each subservice in subservices
               li.servises__subservice-item= subservice
         picture.services__picture
-          - let path = './images/' + imgName
-          - let pathes = [path + '-mobile', path + '-tablet', path + '-desktop']
-          - let links = pathes.map(e => e + '.png')
-          - let linksRetina = pathes.map(e => e + '@2x.png 2x')
-          - let linksAvif = pathes.map(e => e + '.png?as=avif')
-          - let linksWebp = pathes.map(e => e + '.png?as=webp')
-          - let linksAvifRetina =  pathes.map(e => e + '@2x.png?as=avif 2x')
-          - let linksWebpRetina =  pathes.map(e => e + '@2x.png?as=webp 2x')
-          - const mergeArrays = (arr, add) => arr.map((e, i) => e + ', ' + add[i])
-          - let srcset = mergeArrays(links, linksRetina)
-          - let srcsetAvif = mergeArrays(linksAvif, linksAvifRetina)
-          - let srcsetWebp = mergeArrays(linksWebp, linksWebpRetina)
-          source(type='image/avif', media='(min-width: 1280px)', srcset=srcsetAvif[2])
-          source(type='image/avif', media='(min-width: 768px)', srcset=srcsetAvif[1])
-          source(type='image/avif', srcset=srcsetAvif[0])
-          source(type='image/webp', media='(min-width: 1280px)', srcset=srcsetWebp[2])
-          source(type='image/webp', media='(min-width: 768px)', srcset=srcsetWebp[1])
-          source(type='image/webp', srcset=srcsetWebp[0])
-          source(type='image/webp', media='(min-width: 1280px)', srcset=srcset[2])
-          source(type='image/webp', media='(min-width: 768px)', srcset=srcset[1])
-          img.services__image(src=links[0], srcset=linksRetina[0], alt=name, width='240', height='229')
+          source(srcset!=`${imgPath}?as=avif&width=540, ${imgPath}?as=avif 2x`, media='(min-width: 1280px)', type='image/avif')
+          source(srcset!=`${imgPath}?as=webp&width=540, ${imgPath}?as=webp 2x`, media='(min-width: 1280px)', type='image/webp')
+          source(srcset=`${imgPath}?width=540, ${imgPath} 2x`, media='(min-width: 1280px)')
+          source(srcset!=`${imgPath}?as=avif&width=310, ${imgPath}?as=avif 2x`, media='(min-width: 768px)', type='image/avif')
+          source(srcset!=`${imgPath}?as=webp&width=310, ${imgPath}?as=webp 2x`, media='(min-width: 768px)', type='image/webp')
+          source(srcset=`${imgPath}?width=310, ${imgPath} 2x`, media='(min-width: 768px)')
+          source(srcset!=`${imgPath}?as=avif&width=240, ${imgPath}?as=avif&width=480 2x`, type='image/avif')
+          source(srcset!=`${imgPath}?as=webp&width=240, ${imgPath}?as=webp&width=480 2x`, type='image/webp')
+          img.services__image(src=`${imgPath}?width=240`, srcset=`${imgPath}?width=480 2x`, alt=name, width='240', height='216')
 
-    +item(
-      'Создание и упаковка проекта',
-      'service-create',
-      'Залог успешной рекламной камании - это не только попасть в целевого пользователя и добиться от него "клика", но и позаботиться о том, что он увидит после него. Не уделив должного внимания упаковке - вы будете уступать конкурентам, расходуя больше денег.',
-      [
-        'Логотип',
-        'Айдентика',
-        'Веб-сайт',
-        'Рекламные коммуникации',
-        ]
-      )
-
-    +item(
-      'Привлечение клиентов',
-      'service-advertising',
-      'Мы охватываем большинство способов и каналов привлечения интернет-трафика. Благодаря этому мы сможем предложить вам именно те комбинации, которые будут лучшими для вас.',
-      [
-        'Таргетированная реклама',
-        'Контекстная реклама',
-        'Медиабаинг',
-        'SMM',
-        ]
-      )
-
-    +item(
-      'Поддержка и развитие',
-      'service-support',
-      'Ведение проекта не менее важно, чем запуск рекламных кампаний. Сквозная аналитика позволяет грамотно корректировать стратегию и бюджетирование, а оперативные правки и применение новых инструментов увеличивают результативность.',
-      [
-        'Веб-аналитика',
-        'Консалтинг',
-        'Копирайтинг',
-        'Администрирование',
-        ]
-      )
+    each obj in services
+      +item(obj.name, obj.imgPath, obj.text, obj.subservices)

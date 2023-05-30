@@ -141,11 +141,6 @@
     grid-column: 2/ -1;
     grid-row: 1/ -1;
     margin-bottom: 0;
-    margin-top: -20px;
-  }
-
-  @media #{$desktop} {
-    margin-top: -30px;
   }
 }
 
@@ -153,16 +148,17 @@
   display: block;
   object-fit: contain;
   width: 240px;
-  height: 229px;
+  height: 216px;
 
   @media #{$tablet} {
-    width: auto;
-    max-width: 100%;
+    width: 310px;
     height: 280px;
+    margin: -15px 0;
   }
 
   @media #{$desktop} {
-    width: 400px;
-    height: 382px;
+    width: 540px;
+    height: 486px;
+    margin: -40px 0;
   }
 }
