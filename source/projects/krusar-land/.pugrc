@@ -1,0 +1,31 @@
+{
+  "locals": {
+    "portfolio": [
+      {
+        "name": "Магазин товаров со Святой земли Израиля",
+        "url": "./images/portfolio-israel.jpg",
+        "tags": [ "B2C", "Instagram", "SMM", "Таргетинг" ]
+      },
+      {
+        "name": "Бутик-ателье изделий из натуральных тканей Somaforyou",
+        "url": "./images/portfolio-somaforyou.jpg",
+        "tags": [ "B2C", "Instagram", "SMM", "Таргетинг" ]
+      },
+      {
+        "name": "Клиника эстетической стоматологии Dental Beauty Art",
+        "url": "./images/portfolio-dentalbeauty.jpg",
+        "tags": [ "B2C", "Facebook", "Instagram", "SMM" ]
+      },
+      {
+        "name": "Компания IPGRB - Инвестиционная промышленная группа развития блокчейна",
+        "url": "./images/portfolio-ipgrb.jpg",
+        "tags": [ "B2B", "Facebook", "Instagram", "SMM" ]
+      },
+      {
+        "name": "Туристическое агентство Lord Travel",
+        "url": "./images/portfolio-lordtrevel.jpg",
+        "tags": [ "B2C", "Facebook", "Instagram", "Вконтакте" ]
+      }
+    ]
+  }
+}

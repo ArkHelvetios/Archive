@@ -5,3 +5,12 @@
     margin-bottom: 100px;
   }
 }
+
+.page-main__services {
+  padding-top: 30px;
+  margin-bottom: 50px;
+
+  @media #{$desktop} {
+    margin-bottom: 100px;
+  }
+}
