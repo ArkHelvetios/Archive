@@ -1,0 +1,20 @@
+.blog.container
+  h2.blog__title.section-title(data-subtitle='blog') Интересные статьи
+  ul.blog__list
+    mixin item(name, imgPath, targetUrl, tags)
+      li.blog__item
+        a.blog__link-wrapper(href=targetUrl)
+          h3.blog__case-name= name
+          ul.blog__tags-list
+            each tag in tags
+              li.blog__tag= tag
+          picture.blog__picture
+            source(srcset!=`${imgPath}?as=avif&width=400, ${imgPath}?as=avif 2x`, media='(min-width: 1280px)', type='image/avif')
+            source(srcset!=`${imgPath}?as=webp&width=400, ${imgPath}?as=webp 2x`, media='(min-width: 1280px)', type='image/webp')
+            source(srcset=`${imgPath}?width=400, ${imgPath} 2x`, media='(min-width: 1280px)')
+            source(srcset!=`${imgPath}?as=avif&width=280, ${imgPath}?as=avif&width=560 2x`, type='image/avif')
+            source(srcset!=`${imgPath}?as=webp&width=280, ${imgPath}?as=webp&width=560 2x`, type='image/webp')
+            img.blog__image(src=`${imgPath}?width=280`, srcset=`${imgPath}?width=560 2x`, alt=name, width='280', height='158')
+
+    each obj in blog
+      +item(obj.name, obj.imgPath, obj.targetUrl, obj.tags)

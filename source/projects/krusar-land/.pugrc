@@ -59,19 +59,19 @@
       {
         "name": "Таргетинг и с чем его едят",
         "targetUrl": "./pages/blog/targeting.pug",
-        "imgPath": "./images/blog-targeting.jpg",
+        "imgPath": "./images/blog-targeting.png",
         "tags": [ "Facebook", "Instagram", "Таргетинг" ]
       },
       {
         "name": "Контекст в Google Ads",
         "targetUrl": "./pages/blog/googleads.pug",
-        "imgPath": "./images/blog-googleads.jpg",
+        "imgPath": "./images/blog-googleads.png",
         "tags": [ "Google Ads", "SEM", "Контекст" ]
       },
       {
         "name": "Веб-аналитика и зачем она вам",
         "targetUrl": "./pages/blog/webanalytics.pug",
-        "imgPath": "./images/blog-webanalytics.jpg",
+        "imgPath": "./images/blog-webanalytics.png",
         "tags": [ "Google Ads", "Веб-аналитика" ]
       }
     ]

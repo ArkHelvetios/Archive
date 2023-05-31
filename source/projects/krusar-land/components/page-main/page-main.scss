@@ -1,14 +1,13 @@
-.page-main__works-list {
-  margin-bottom: 50px;
-
-  @media #{$desktop} {
-    margin-bottom: 100px;
-  }
-}
-
-.page-main__services {
+.page-main__works-list,
+.page-main__services,
+.page-main__portfolio,
+.page-main__blog {
   padding-top: 30px;
   margin-bottom: 50px;
+
+  @media #{$tablet} {
+    margin-bottom: 80px;
+  }
 
   @media #{$desktop} {
     margin-bottom: 100px;
