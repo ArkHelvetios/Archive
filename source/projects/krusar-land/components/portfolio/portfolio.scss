@@ -1,0 +1,138 @@
+.portfolio__title {
+  font-size: 26px;
+  margin: 0;
+  margin-bottom: 10px;
+
+  @media #{$tablet} {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+
+  @media #{$desktop} {
+    margin-bottom: 40px;
+  }
+
+}
+
+.portfolio__list {
+  display: grid;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media #{$tablet} {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 200px;
+  }
+
+  @media #{$desktop} {
+    grid-template-columns: 4fr 3fr 3fr;
+    grid-template-rows: 240px 240px ;
+  }
+}
+
+.portfolio__item {
+  @media #{$tablet} {
+    &:first-child {
+      grid-column: 1/3;
+    }
+  }
+
+  @media #{$desktop} {
+    &:first-child {
+      grid-column: 1/2;
+      grid-row: 1/3;
+    }
+  }
+}
+
+.portfolio__link-wrapper {
+  display: block;
+  position: relative;
+  color: inherit;
+  overflow: hidden;
+  z-index: 0;
+  height: 100%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 200%;
+    background-image: linear-gradient(to top, fade-out($black, 0.65) 0%, fade-out($black, 0.9) 75%);
+    transform: translateY(0);
+    transition: transform 200ms ease-out;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &::before{
+      transform: translateY(-50%);
+    }
+
+    .portfolio__picture {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.portfolio__case-name {
+  position: absolute;
+  inset: auto 0 0;
+  margin: 0;
+  padding: 15px;
+  z-index: 1;
+
+  @media #{$desktop} {
+    font-size: 16px;
+  }
+}
+
+.portfolio__tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: absolute;
+  inset: 0 0 auto;
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  z-index: 1;
+}
+
+.portfolio__tag {
+  display: block;
+  font-family: $font-family-heading;
+  font-size: 10px;
+  line-height: 1em;
+  font-weight: 600;
+  background-color: $brand-color-orange;
+  padding: 5px;
+}
+
+.portfolio__picture {
+  display: block;
+  height: 100%;
+  transition: transform 600ms ease-out;
+}
+
+.portfolio__image {
+  display: block;
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+
+  @media #{$tablet} {
+    width: 100%;
+  }
+
+  @media #{$desktop} {
+    height: 100%;
+  }
+}

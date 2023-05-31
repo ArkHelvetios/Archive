@@ -3,6 +3,7 @@
   top: 0;
   background-color: $brand-color-grey;
   box-shadow: 0 -15px 25px #000;
+  z-index: 1;
 
   &--nojs {
     position: static;

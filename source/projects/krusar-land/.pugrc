@@ -25,28 +25,54 @@
     "portfolio": [
       {
         "name": "Магазин товаров со Святой земли Израиля",
+        "targetUrl": "./pages/portfolio/israel.pug",
         "imgPath": "./images/portfolio-israel.jpg",
         "tags": [ "B2C", "Instagram", "SMM", "Таргетинг" ]
       },
       {
         "name": "Бутик-ателье изделий из натуральных тканей Somaforyou",
+        "targetUrl": "./pages/portfolio/somaforyou.pug",
         "imgPath": "./images/portfolio-somaforyou.jpg",
         "tags": [ "B2C", "Instagram", "SMM", "Таргетинг" ]
       },
       {
         "name": "Клиника эстетической стоматологии Dental Beauty Art",
+        "targetUrl": "./pages/portfolio/dentalbeauty.pug",
         "imgPath": "./images/portfolio-dentalbeauty.jpg",
         "tags": [ "B2C", "Facebook", "Instagram", "SMM" ]
       },
       {
         "name": "Компания IPGRB - Инвестиционная промышленная группа развития блокчейна",
+        "targetUrl": "./pages/portfolio/ipgrb.pug",
         "imgPath": "./images/portfolio-ipgrb.jpg",
         "tags": [ "B2B", "Facebook", "Instagram", "SMM" ]
       },
       {
         "name": "Туристическое агентство Lord Travel",
+        "targetUrl": "./pages/portfolio/lordtrevel.pug",
         "imgPath": "./images/portfolio-lordtrevel.jpg",
         "tags": [ "B2C", "Facebook", "Instagram", "Вконтакте" ]
+      }
+    ],
+
+    "blog": [
+      {
+        "name": "Таргетинг и с чем его едят",
+        "targetUrl": "./pages/blog/targeting.pug",
+        "imgPath": "./images/blog-targeting.jpg",
+        "tags": [ "Facebook", "Instagram", "Таргетинг" ]
+      },
+      {
+        "name": "Контекст в Google Ads",
+        "targetUrl": "./pages/blog/googleads.pug",
+        "imgPath": "./images/blog-googleads.jpg",
+        "tags": [ "Google Ads", "SEM", "Контекст" ]
+      },
+      {
+        "name": "Веб-аналитика и зачем она вам",
+        "targetUrl": "./pages/blog/webanalytics.pug",
+        "imgPath": "./images/blog-webanalytics.jpg",
+        "tags": [ "Google Ads", "Веб-аналитика" ]
       }
     ]
   }
