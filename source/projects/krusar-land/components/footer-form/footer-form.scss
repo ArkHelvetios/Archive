@@ -1,0 +1,51 @@
+.footer-form {
+  max-width: 360px;
+  margin: auto;
+}
+
+.footer-form__field {
+  display: block;
+  width: 100%;
+  color: $brand-color-orange;
+  font-family: $font-family-plaintext;
+  font-size: 12px;
+  line-height: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid $brand-color-orange;
+  padding: 10px 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &:focus {
+    color: $white;
+    border-color: $white;
+    outline: none;
+  }
+
+  @media #{$desktop} {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+}
+
+.footer-form__button {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.footer-form__data-agreement {
+  font-size: 9px;
+  line-height: 1em;
+  text-align: center;
+  margin: 0;
+
+  @media #{$tablet} {
+    font-size: 10px;
+  }
+}

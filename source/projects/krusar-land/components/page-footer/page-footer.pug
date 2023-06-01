@@ -1,3 +1,8 @@
 footer.page-footer
   .page-footer__container.container
-    p.page-footer__text-item Copyright © 2023 Arkhipov Aleksander (#[a.link-external(href='https://github.com/ArkHelvetios') ArkHelvetios])
+    section.page-footer__form
+      h2.visually-hidden Форма обратной связи
+      p.page-footer__title.section-title(data-subtitle='contact us') Свяжитесь с нами
+      include ../footer-form/footer-form.pug
+    .page-footer__bottom
+      p.page-footer__text-item Copyright © 2023 Arkhipov Aleksander (#[a.link-external(href='https://github.com/ArkHelvetios') ArkHelvetios])

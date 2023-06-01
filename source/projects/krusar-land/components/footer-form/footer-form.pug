@@ -1,0 +1,11 @@
+form.footer-form(action='#', method='get', name='contact us form')
+  label.visually-hidden(for='name') Ваше имя
+  input.footer-form__field(type='text', id='name', name='name', placeholder='ваше имя')
+  label.visually-hidden(for='phone') Ваше номер телефона
+  input.footer-form__field(type='tel', id='phone', name='phone', placeholder='номер телефона')
+  label.visually-hidden(for='email') Вашу email
+  input.footer-form__field(type='email', id='email', name='email', placeholder='email')
+  label.visually-hidden(for='comment') Ваш комментарий
+  textarea.footer-form__field(id='comment', name='comment', placeholder='комментарий')
+  button.footer-form__button.button(type='submit') Отправить
+  p.footer-form__data-agreement Отправляя форму вы соглашаетесь на обработку ваших персональных данных в соответствии с #[a.link-external(href='./pages/privacy-policy.pug') политикой конфиденциальности]
